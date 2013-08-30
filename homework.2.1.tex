@@ -1,0 +1,124 @@
+% -*- fill-column: 110 -*-
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+% \usepackage{apacite}
+\usepackage{color}
+%\usepackage{sagetex}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\pagestyle{fancy}
+\lhead{\footnotesize Exercise Set 2.1}
+\rhead{\footnotesize August 28 2013 -- MA325 -- Shae Erisson}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\begin{document}
+
+\section*{Exercise Set 2.1}
+\begin{enumerate}
+% Section 2.1: 6, 8, 14, 15, 23, 26*, 27, 35, 50*
+  \setcounter{enumi}{5}
+\item % 6
+  \begin{enumerate}
+  \item $s \wedge i$
+  \item $\lnot (s \wedge i)$
+  \end{enumerate}
+
+  \setcounter{enumi}{7}
+\item
+  \begin{enumerate}
+  \item $h \wedge w \wedge \lnot s$
+  \item $\lnot w \wedge h \wedge s $
+  \item $ \lnot h \wedge \lnot w \wedge \lnot s $ which is equivalent to $ \lnot (h
+    \vee w \vee s)$
+  \item $ \lnot ( w \vee s) \wedge h $
+  \item $ w \wedge \lnot (h \wedge w)$
+  \end{enumerate}
+\setcounter{enumi}{13}
+\item
+
+\begin{tabular} {|c|c|c||c|c|}
+\hline
+$p$ & $q$ & $r$ & $q \wedge r$ & $p \wedge (q \wedge r)$\\ \hline
+T & T & T & T & T\\
+T & T & F & F & F\\
+T & F & T & F & F\\
+T & F & F & F & F\\ 
+F & T & T & T & F\\
+F & T & F & F & F\\
+F & F & T & F & F\\
+F & F & F & F & F\\ \hline
+\end{tabular}
+
+\item 
+\begin{tabular} {|c|c|c||c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $\neg q$ & $\neg q \vee r$ & $p \wedge (\neg q \vee r)$\\ \hline
+T & T & T & F & T & T\\
+T & T & F & F & F & F\\
+T & F & T & T & T & T\\
+T & F & F & T & T & T\\ 
+F & T & T & F & T & F\\
+F & T & F & F & F & F\\
+F & F & T & T & T & F\\
+F & F & F & T & T & F\\ \hline
+\end{tabular}
+
+\pagebreak{}
+\setcounter{enumi}{22}
+\item % 23
+\begin{tabular} {|c|c|c||c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \wedge q$ & $(p \wedge q) \vee r$\\ \hline
+T & T & T & T & T\\
+T & T & F & T & T\\
+T & F & T & F & T\\
+T & F & F & F & F\\ 
+F & T & T & F & T\\
+F & T & F & F & F\\
+F & F & T & F & T\\
+F & F & F & F & F\\ \hline
+\end{tabular}
+
+\begin{tabular} {|c|c|c||c|c|}
+\hline
+$p$ & $q$ & $r$ & $q \vee r$ & $p \wedge (q \vee r)$\\ \hline
+T & T & T & T & T\\
+T & T & F & T & T\\
+T & F & T & T & T\\
+T & F & F & F & F\\ 
+F & T & T & T & F\\
+F & T & F & T & F\\
+F & F & T & T & F\\
+F & F & F & F & F\\ \hline
+\end{tabular}
+
+These two statements are not equivalent, even though I originally expected
+equivalence. Going back through the associative and distributive laws
+I see that $\vee$ is associative with $\vee$ and $\wedge$ is
+associative with $\wedge$, but not with the other operation.
+\setcounter{enumi}{25}
+\item % 26
+Take this sentence: Sam is an orange belt and Kate is a red
+  belt. To logically negate this sentence either part of the
+  conjunction can be false and the entire statement will be false: Sam
+  is not an orange belt or Kate is not a red belt.
+
+\item % 27
+The connector is not loose and the machine is not unplugged.
+
+\setcounter{enumi}{34}
+\item $x \not \leq -1$ and $x \not > 1$
+
+\setcounter{enumi}{49}
+\item was not completed in time, oops.
+\end{enumerate}
+
+\end{document}
+
+% LocalWords: LocalWords differentiable

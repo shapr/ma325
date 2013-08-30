@@ -1,0 +1,74 @@
+% -*- fill-column: 110 -*-
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+% \usepackage{apacite}
+\usepackage{color}
+%\usepackage{sagetex}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\pagestyle{fancy}
+\lhead{\footnotesize Exercise Set 2.2}
+\rhead{\footnotesize August 30 2013 -- MA325 -- Shae Erisson}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\begin{document}
+
+\section*{Exercise Set 2.2}
+\begin{enumerate}
+% Section 2.2: 2, 3, 6, 7, 15, 18, 21, 33, 35*, 41, 43
+\setcounter{enumi}{1}
+\item % 2
+If I catch the 8:05 bus, I am on time for work.
+\item % 3
+If you do not freeze, I will shoot.
+\setcounter{enumi}{5} % 6
+\item
+\begin{tabular} {|c|c||c|c|c|c|c|}
+\hline
+$p$ & $q$ & $\neg p$ & $\neg p \wedge q$ & $p \vee q$ & $(p \vee q) \vee (\neg p \wedge q)$ & $(p \vee q) \vee
+(\neg p \wedge q) \rightarrow q$\\ \hline
+T & T & F & F & T & T & T\\
+T & F & F & F & T & T & F\\
+F & T & T & T & T & T & T\\
+F & F & T & F & F & F & T\\ \hline
+\end{tabular}
+
+\item % 7
+\begin{tabular} {|c|c|c||c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $\neg q$ & $p \wedge \neg q$ & $p \wedge \neg q \rightarrow r$\\ \hline
+T & T & T & F & F & T\\
+T & T & F & F & F & T\\
+T & F & T & T & T & T\\
+T & F & F & T & T & F\\ 
+F & T & T & F & F & T\\
+F & T & F & F & F & T\\
+F & F & T & T & F & T\\
+F & F & F & T & F & T\\ \hline
+\end{tabular}
+
+\setcounter{enumi}{14} % 15
+\item 
+\setcounter{enumi}{17} % 18
+\item 
+\setcounter{enumi}{20} % 21
+\item 
+\setcounter{enumi}{32} % 33
+\item 
+\setcounter{enumi}{34} % 35
+\item 
+\setcounter{enumi}{40} % 41
+\item 
+\setcounter{enumi}{42} % 43
+\item 
+\end{enumerate}
+
+\end{document}
+
+% LocalWords: LocalWords differentiable
