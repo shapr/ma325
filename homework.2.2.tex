@@ -14,7 +14,7 @@
 \usepackage{setspace}
 \pagestyle{fancy}
 \lhead{\footnotesize Exercise Set 2.2}
-\rhead{\footnotesize August 30 2013 -- MA325 -- Shae Erisson}
+\rhead{\footnotesize September 3 2013 -- MA325 -- Shae Erisson}
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
 \begin{document}
@@ -44,27 +44,65 @@ F & F & T & F & F & F & T\\ \hline
 \hline
 $p$ & $q$ & $r$ & $\neg q$ & $p \wedge \neg q$ & $p \wedge \neg q \rightarrow r$\\ \hline
 T & T & T & F & F & T\\
-T & T & F & F & F & T\\
+T & T & F & F & F & F\\
 T & F & T & T & T & T\\
-T & F & F & T & T & F\\ 
+T & F & F & T & T & F\\
 F & T & T & F & F & T\\
-F & T & F & F & F & T\\
+F & T & F & F & F & F\\
 F & F & T & T & F & T\\
 F & F & F & T & F & T\\ \hline
 \end{tabular}
 
 \setcounter{enumi}{14} % 15
-\item 
+\item
+
+\begin{tabular} {|c|c|c||c|c|}
+\hline
+$p$ & $q$ & $r$ & $q \rightarrow r$ & $p \rightarrow (q \rightarrow r)$\\ \hline
+T & T & T & T & T\\
+T & T & F & F & F\\
+T & F & T & T & T\\
+T & F & F & T & T\\
+F & T & T & T & T\\
+F & T & F & F & T\\
+F & F & T & T & F\\
+F & F & F & T & F\\ \hline
+\end{tabular}
+
+\begin{tabular} {|c|c|c||c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \rightarrow q$ & $(p \rightarrow q) \rightarrow r$\\ \hline
+T & T & T & T & T\\
+T & T & F & T & F\\
+T & F & T & F & T\\
+T & F & F & F & T\\
+F & T & T & T & T\\
+F & T & F & T & F\\
+F & F & T & T & T\\
+F & F & F & T & F\\ \hline
+\end{tabular}
+
+This clearly shows the two are not logically equivalent. Further reading on Wikipedia turns up commutativity
+of antecedents $a \rightarrow (b \rightarrow c) \equiv b \rightarrow (a \rightarrow c)$, but strongly implies
+that the two statements above are not logically equivalent.
+\pagebreak{}
 \setcounter{enumi}{17} % 18
-\item 
+\item
+% $\overbrace{\text{or}}^{\vee}$
+  \begin{enumerate}
+  \item If $\overbrace{\text{it walks like a duck}}^{w}$ $\overbrace{\text{and}}^{\wedge}$ $\overbrace{\text{it talks like a duck}}^{t}$ $\overbrace{\text{then}}^{\rightarrow}$ $\overbrace{\text{it is a duck}}^{d}$ \\becomes $w \wedge t \rightarrow d$.
+  \item Either $\overbrace{\text{it does not walk like a duck}}^{\neg w}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it does not talk like a duck}}^{\neg t}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it is a duck}}^{d}$ \\becomes $\neg w \vee \neg t \vee d $.
+  \item If $\overbrace{\text{it does not walk like a duck}}^{\neg w}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it does not talk like a duck}}^{\neg t}$, $\overbrace{\text{then}}^{\rightarrow}$ $\overbrace{\text{it is not a duck}}^{\neg d}$\\becomes $\neg w \vee \neg t \rightarrow \neg d$.
+  \end{enumerate}
+
 \setcounter{enumi}{20} % 21
-\item 
+\item
 \setcounter{enumi}{32} % 33
-\item 
+\item This integer is even if it equals twice some integer and some integer is half this integer.
 \setcounter{enumi}{34} % 35
-\item 
+\item
 \setcounter{enumi}{40} % 41
-\item 
+\item If this triangle has two $45^{\circ}$ angles, then it is a right triangle.
 \setcounter{enumi}{42} % 43
 \item 
 \end{enumerate}
