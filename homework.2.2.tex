@@ -90,9 +90,47 @@ that the two statements above are not logically equivalent.
 \item
 % $\overbrace{\text{or}}^{\vee}$
   \begin{enumerate}
-  \item If $\overbrace{\text{it walks like a duck}}^{w}$ $\overbrace{\text{and}}^{\wedge}$ $\overbrace{\text{it talks like a duck}}^{t}$ $\overbrace{\text{then}}^{\rightarrow}$ $\overbrace{\text{it is a duck}}^{d}$ \\becomes $w \wedge t \rightarrow d$.
-  \item Either $\overbrace{\text{it does not walk like a duck}}^{\neg w}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it does not talk like a duck}}^{\neg t}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it is a duck}}^{d}$ \\becomes $\neg w \vee \neg t \vee d $.
-  \item If $\overbrace{\text{it does not walk like a duck}}^{\neg w}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it does not talk like a duck}}^{\neg t}$, $\overbrace{\text{then}}^{\rightarrow}$ $\overbrace{\text{it is not a duck}}^{\neg d}$\\becomes $\neg w \vee \neg t \rightarrow \neg d$.
+  \item If $\overbrace{\text{it walks like a duck}}^{w}$ $\overbrace{\text{and}}^{\wedge}$ $\overbrace{\text{it talks like a duck}}^{t}$ $\overbrace{\text{then}}^{\rightarrow}$ $\overbrace{\text{it is a duck}}^{d}$ \\becomes $w \wedge t \rightarrow d$.\\[\baselineskip]
+\begin{tabular} {|c|c|c||c|c|}
+\hline
+$w$ & $t$ & $d$ & $w \wedge t$ & $w \wedge t \rightarrow d$\\ \hline
+T & T & T & T & T\\
+T & T & F & T & F\\
+T & F & T & F & T\\
+T & F & F & F & T\\
+F & T & T & F & T\\
+F & T & F & F & T\\
+F & F & T & F & T\\
+F & F & F & F & T\\ \hline
+\end{tabular}
+
+  \item Either $\overbrace{\text{it does not walk like a duck}}^{\neg w}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it does not talk like a duck}}^{\neg t}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it is a duck}}^{d}$ \\becomes $\neg w \vee \neg t \vee d $.\\[\baselineskip]
+\begin{tabular} {|c|c|c||c|c|c|c|}
+\hline
+$w$ & $t$ & $d$  & $\neg w$ & $\neg t$ & $\neg w \vee \neg t$ & $\neg w \vee \neg t \vee d$\\ \hline
+T & T & T & F & F & F & T\\
+T & T & F & F & F & F & F\\
+T & F & T & F & T & T & T\\
+T & F & F & F & T & T & T\\
+F & T & T & T & F & T & T\\
+F & T & F & T & F & T & T\\
+F & F & T & T & T & T & T\\
+F & F & F & T & T & T & T\\ \hline
+\end{tabular}
+  \item If $\overbrace{\text{it does not walk like a duck}}^{\neg w}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it does not talk like a duck}}^{\neg t}$, $\overbrace{\text{then}}^{\rightarrow}$ $\overbrace{\text{it is not a duck}}^{\neg d}$\\becomes $\neg w \vee \neg t \rightarrow \neg d$.\\[\baselineskip]
+\begin{tabular} {|c|c|c||c|c|c|c|c|}
+\hline
+$w$ & $t$ & $d$  & $\neg w$ & $\neg t$ & $\neg d$ & $\neg w \vee \neg t$ & $\neg w \vee \neg t \rightarrow \neg d$\\ \hline
+T & T & T & F & F & F & F & T\\
+T & T & F & F & F & T & F & F\\
+T & F & T & F & T & F & T & T\\
+T & F & F & F & T & T & T & T\\
+F & T & T & T & F & F & T & T\\
+F & T & F & T & F & T & T & T\\
+F & F & T & T & T & F & T & T\\
+F & F & F & T & T & T & T & T\\ \hline
+\end{tabular}
+
   \end{enumerate}
 
 \setcounter{enumi}{20} % 21
