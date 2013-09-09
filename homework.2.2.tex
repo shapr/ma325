@@ -117,17 +117,18 @@ F & T & F & T & F & T & T\\
 F & F & T & T & T & T & T\\
 F & F & F & T & T & T & T\\ \hline
 \end{tabular}
+Clearly the first and the second logical statements are equivalent, but it's not clear to my why. After perusing the logical equivalences, I don't see any reason this should be true. I'll show up in your office for a sanity check.
   \item If $\overbrace{\text{it does not walk like a duck}}^{\neg w}$ $\overbrace{\text{or}}^{\vee}$ $\overbrace{\text{it does not talk like a duck}}^{\neg t}$, $\overbrace{\text{then}}^{\rightarrow}$ $\overbrace{\text{it is not a duck}}^{\neg d}$\\becomes $\neg w \vee \neg t \rightarrow \neg d$.\\[\baselineskip]
 \begin{tabular} {|c|c|c||c|c|c|c|c|}
 \hline
 $w$ & $t$ & $d$  & $\neg w$ & $\neg t$ & $\neg d$ & $\neg w \vee \neg t$ & $\neg w \vee \neg t \rightarrow \neg d$\\ \hline
 T & T & T & F & F & F & F & T\\
-T & T & F & F & F & T & F & F\\
-T & F & T & F & T & F & T & T\\
+T & T & F & F & F & T & F & T\\
+T & F & T & F & T & F & T & F\\
 T & F & F & F & T & T & T & T\\
-F & T & T & T & F & F & T & T\\
+F & T & T & T & F & F & T & F\\
 F & T & F & T & F & T & T & T\\
-F & F & T & T & T & F & T & T\\
+F & F & T & T & T & F & T & F\\
 F & F & F & T & T & T & T & T\\ \hline
 \end{tabular}
 
@@ -135,14 +136,37 @@ F & F & F & T & T & T & T & T\\ \hline
 
 \setcounter{enumi}{20} % 21
 \item
+  If the value of $p \rightarrow q$ is false, then the values can only be $p \equiv T$ and $q \equiv F$.
+  \begin{enumerate}
+  \item $\neg T \rightarrow F \equiv T$
+  \item $T \vee F \equiv T$
+  \item $F \rightarrow T \equiv T$
+  \end{enumerate}
+
 \setcounter{enumi}{32} % 33
-\item This integer is even if it equals twice some integer and some integer is half this integer.
+\item This integer is even if it equals twice some integer and if some integer is half this integer.
 \setcounter{enumi}{34} % 35
 \item
+The contrapositive of a statement is logically equivalent to the original statement. Thus in this case, negating the conclusion and making it the condition for the negated condition is the same as the original statement.
+  \begin{enumerate}
+  \item If Sam is an expert sailor he will be allowed on Signe's racing boat.
+  \item If Sam is not allowed on Signe's boat, Sam is not an expert sailor.
+  \end{enumerate}
+
 \setcounter{enumi}{40} % 41
+\item
+\begin{enumerate}
 \item If this triangle has two $45^{\circ}$ angles, then it is a right triangle.
+\item If this triangle is not a right triangle, it does not have two $45^{\circ}$ angles.
+\end{enumerate}
 \setcounter{enumi}{42} % 43
 \item 
+
+\begin{enumerate}
+\item If Jim does his homework regularly, Jim will pass the course.
+\item If Jim does not pass the course, Jim did not do his homework regularly.
+\end{enumerate}
+
 \end{enumerate}
 
 \end{document}
