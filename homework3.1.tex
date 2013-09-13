@@ -34,13 +34,46 @@
   \end{enumerate}
 \setcounter{enumi}{5} % 6
 \item
+  $R(m,n)$ is the predicate ``If $m$ is a factor of $n^{2}$ then $m$
+  is a factor of $n$.
+  \begin{enumerate}
+  \item While 25 is a factor of 100, 25 is not a factor of 10.
+  \item A small amount of Haskell code was written to discover numbers
+    that have this property:
+\begin{verbatim}
+prop_Fail m n = prereq ==> mod n m == 0
+          where prereq = n > 0 && m > 0 && mod (n*n) m == 0
+\end{verbatim}
+Several pairs were found, including 12 and 8, 8 and 4, and 9 and 3.
+\item In the case of 5 and 10, the first number does divide both the
+  number and its square.
+\item Any number that evenly divides some other number will also
+  divide the square of that other number, thus values are available,
+  including 2 and 4, and 7 and 14.
+  \end{enumerate}
+
 \setcounter{enumi}{10} % 11
-\item
-\item 
+\item The simplest example is $1 \times 1 \leq 1 + 1$.
+% 12
+\item Almost any number works for a counter example: $\sqrt{4} \neq
+  \sqrt{2} + \sqrt{2}$ since the result becomes $4 = \sim 3.8$.
 \setcounter{enumi}{17} % 18
-\item 
+\item
+  \begin{enumerate}
+  \item $\exists s\in$ students, such that $s$ $E(s)$ and $M(s)$.
+%  \item $\forall$
+  \end{enumerate}
+
 \setcounter{enumi}{32} % 33
-\item 
+\item
+  \begin{enumerate}
+  \item True, any number greater than 2 will be greater than 1.
+  \item True, the square of any number greater than 2 will be greater than 4.
+  \item True, if the square of a number is greater than 4, the number will be greater than 2.
+  \item True, if the absolute value of a number is greater than 2, its square will be greater than 4, and if
+    the square of a number is greater than 4, it will be greater than 2.
+  \end{enumerate}
+
 \end{enumerate}
 
 \end{document}
