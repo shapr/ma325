@@ -27,7 +27,7 @@
 
 \setcounter{section}{4}
 \section*{Exercise Sets 4.1, 4.2, 4.3, 4.4, 4.6}
-\subsection{Direct Proof and Counterexample}
+\subsection{Direct Proof and Counterexample : Introduction}
 \begin{enumerate}
 % Section 4.1: 10,12,30,31,58*
   \setcounter{enumi}{9}
@@ -72,17 +72,55 @@ that the sum of a squared even integer and a squared odd integer will be odd.
 
 \end{enumerate}
 
-\subsection{Direct Proof and Counterexample} % % Section 4.2: 16, 17*
+\subsection{Direct Proof and Counterexample : Rational Numbers} % Section 4.2: 16, 17*
 \begin{enumerate}
 \setcounter{enumi}{15}
 \item % 4.2 16
   \begin{proof}[The product of any two rational numbers is a rational number.]
-
+Let $r$ and $s$ be rational numbers. Then there are integers $a,b,c,d$ such that $r = \dfrac{a}{b}$ and $s =
+\dfrac{c}{d}$ with $b,d \neq 0$. So, we can multiply $r s$ to get $r \cdot s = \dfrac{a}{b} \cdot \dfrac{c}{d}
+= \dfrac{ac}{db}$ Since the product of two integers is an integer, $a \cdot c$ and $b \cdot d$ are
+integers. According to the zero product property we know that if $b$ and $d$ are not zero, their product will
+not be zero. Since we know that $b$ and $d$ are not zero, their product will not be zero. Therefore $r \cdot
+s$ is a rational number.
   \end{proof}
 
 \item % 4.2 17*
   \begin{proof}[The difference of any two rational numbers is a rational number.]
+Let $r$ and $s$ be rational numbers. Then there are integers $a,b,c,d$ such that $r = \dfrac{a}{b}$ and $s =
+\dfrac{c}{d}$ with $b,d \neq 0$. So, we can subtract $r s$ to get $r - s = \dfrac{a}{b} - \dfrac{c}{d}
+= \dfrac{a - c}{d - b}$ Since the difference of two integers is an integer, $a - c$ and $b - d$ are
+integers. Even so, we cannot be sure that $c - d$ will never be zero, and rational integers require that the
+denominator be non-zero. Thus the difference of any two rational numbers is not always a rational number.
   \end{proof}
+\end{enumerate}
+
+\subsection{Direct Proof and Counterexample: Divisibility} % Section 4.3: 20*, 27
+\begin{enumerate}
+\setcounter{enumi}{19} % 20
+\item % the sum of any three consecutive integers is divisible by 3
+  Three consecutive integers are expressed as $k, k+1, k+2$ by definition. We express this as a
+  fraction. $\dfrac{k + k + 1 + k + 2}{3}$ We can algebraically rearrange this as $\dfrac{k + k + k + 1 +
+    2}{3}$ and then simplify to $\dfrac{3k + 3}{3}$. By dividing the entire fraction by 3, this can then be
+  further simplified to $k + 1$, showing that the sum of three consecutive integers is divisible by 3.
+  \setcounter{enumi}{26} % 27
+\item % for all integers a, b, and c: if a|(b+c) then a|b or a|c
+The smallest counterexample for this is $2|4$ but when we break 4 down into $1+3$, we can see that $2|1$
+fails, and $2|3$ also fails.
+\end{enumerate}
+
+\subsection{Direct Proof and Counterexample: Division into Cases and the Quotient Remainder Theorem} 
+% Section 4.4: 17, 19
+\begin{enumerate}
+\setcounter{enumi}{16} % 17
+\item % prove that the product of any two consecutive integers is even
+Let the two consecutive integers be $k$ and $k + 1$. The product of these will be $k \cdot k + k$.
+In the case that $k$ is an odd number, $k + 1$ will be an even number, and $k \cdot k + 1$ will have 2 as one
+of its factors.
+In the case that $k$ is an even number, and $k + 1$ is odd, $k \cdot k + 1$ will have 2 as one of its factors.
+Since 2 is a factor for both cases, the product of any two consecutive integers must be even.
+\setcounter{enumi}{18} % 19
+\item The rest of this homework has been canceled due to life issues.% prove that for all integers n, n^2 - n + 3 is odd
 \end{enumerate}
 \end{document}
 
