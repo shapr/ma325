@@ -1,0 +1,104 @@
+% -*- fill-column: 110 -*-
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+% \usepackage{apacite}
+\usepackage{color}
+%\usepackage{sagetex}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\pagestyle{fancy}
+\lhead{\footnotesize Exercise Sets 6.1 6.2}
+\rhead{\footnotesize October 32 2013 -- MA325 -- Shae Erisson}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+\newenvironment{modenumerate}
+  {\enumerate\setupmodenumerate}
+  {\endenumerate}
+
+\newif\ifmoditem
+\newcommand{\setupmodenumerate}{%
+  \global\moditemfalse
+  \let\origmakelabel\makelabel
+  \def\moditem##1{\global\moditemtrue\def\mesymbol{##1}\item}%
+  \def\makelabel##1{%
+    \origmakelabel{##1\ifmoditem\rlap{\mesymbol}\fi\enspace}%
+    \global\moditemfalse}%
+}
+
+\begin{document}
+% Section 6.1: 3, 5, 9. 16*, 19, 22
+
+\setcounter{section}{6}
+\subsection{Exercise Set 6.1}
+\begin{modenumerate}
+
+\setcounter{enumi}{2}
+\item % 3
+Let $R$, $S$, and $T$ be defined as follows:\\
+$R  = \{x \in \mathbb{Z} | x$ is divisible by 2$\}$\\
+$S = \{y \in \mathbb{Z} | y$ is divisible by 3$\}$\\
+$T = \{z \in \mathbb{Z} | z$ is divisible by 6$\}$\\
+\begin{enumerate}
+\item Is $R\subseteq T$? No, the simplest case where an element of R is not an element of S is the number
+  2, which is not divisible by 3.
+\item Is $T \subseteq R$? Yes, every number that is divisible by 6 is also divisible by 2.
+\item Is $T \subseteq S$? Yes, every number that is divisible by 6 is also divisible by 3.
+\end{enumerate}
+
+\setcounter{enumi}{4}
+\item % 5
+Let $A = \{n \in \mathbb{Z} | n = 5r $ for some integer $r\}$ and $B = \{m \in \mathbb{Z} | m = 20s$ for some
+integer $s \}$. Prove or disprove the following statements
+\begin{enumerate}
+\item Is $A \subseteq B$? No, not all numbers divisible by 5 are divisible by 20. A counterexample is that the
+  number 5 is divisible by 5, but not divisible by 20.
+\item Is $B \subseteq A$? Yes, all numbers divisible by 20 are divisible by 5.
+\end{enumerate}
+
+\setcounter{enumi}{8}
+\item % 9
+Complete the following sentences without using the symbols $\cup, \cap, or -$.
+\begin{enumerate}
+\item $x \not\in A \cup B$ if, and only if, $x$ is not an element of $A$ and x is not an element of $B$.
+\item $x \not\in A \cap B$ if, and only if, $x$ is an element of $A$ but not an element of $B$, or if $x$ is
+  an element of $B$ but not an element of $A$.
+\item $x \not\in A - B$ if, and only if $x$ is an element of $A$ and $x$ is an element of $B$, or if $x$ is an
+  element of $B$ and not an element of $A$, or if $x$ is not an element of $A$ and $x$ is not an element of
+  $B$.
+\end{enumerate}
+\setcounter{enumi}{15}
+\moditem{*} % 16*
+
+\setcounter{enumi}{18}
+\item % 19
+\setcounter{enumi}{21}
+\item % 22
+\end{modenumerate}
+\subsection{Exercise Set 6.2}
+% Section 6.2: 1, 7, 8, 9*, 12, 13, 16, 25, 34*
+\begin{modenumerate}
+\item % 1
+\setcounter{enumi}{6}
+\item % 7
+\item % 8
+\moditem{*} % 9*
+\setcounter{enumi}{11}
+\item % 12
+\item % 13
+\setcounter{enumi}{15}
+\item % 16
+\setcounter{enumi}{24}
+\item % 25
+\setcounter{enumi}{33}
+\moditem{*} % 34*
+\end{modenumerate}
+\end{document}
+
+% LocalWords: LocalWords

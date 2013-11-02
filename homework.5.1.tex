@@ -64,27 +64,25 @@ separated off, giving $\displaystyle\sum_{m=1}^{n}m(m+1) + \displaystyle\sum_{n}
   By definition, $\displaystyle{n \choose r} = \dfrac{n!}{r!(n - r)!}$, for integers $n$ and $r$ with $0 \leq
   r \leq n$.
 
-Thus $\displaystyle{n \choose r + 1}$ will be equal to $\dfrac{n!}{(r+1)!(n - r+1)!}$.
+Thus $\displaystyle{n \choose r + 1}$ will be equal to $\dfrac{n!}{(r+1)!(n - (r+1))!}$ or
+$\dfrac{n!}{(r+1)!(n - r -1)!}$.
   
 By definition $n!$ is $n \cdot (n - 1) \ldots 3 \cdot 2 \cdot 1$.
 
 Thus, $(r+1)!$ can be rewritten as $r!(r +1)$ and substituted into our earlier expression.
 
-Now our expression is $\dfrac{n!}{(r+1)r!(n - r -1 )!}$, which gets us to $\dfrac{1}{r+1} \cdot
-\dfrac{n!}{r!(n - r -1 )! }$.
+Now our expression is $\dfrac{n!}{(r+1)r!(n - r)!}$, which gets us to $\dfrac{1}{r+1} \cdot
+\dfrac{n!}{r!(n - r + 1)! }$.
 
-We know our goal for the bottom half of the fraction is $r!(n-r)!$ and we have $r!(n - r - 1)!$.
+We know our goal for the bottom half of the fraction is $r!(n-r)!$ and we have $r!(n - r + 1)!$.
 
-By definition of factorial, we know that $(n - r - 1)$ multiplied by $n - r$ will then be $(n - r)$, so we
-multiply the term by $\dfrac{n-r}{n-r}$.
+By definition of factorial, we know that $(n - r + 1)$ is the same as  by $(n - r + 1)(n -r)$ so we
+split that out into the term by $\dfrac{1}{n-r+1}$.
 
-We then have $\dfrac{1}{r+1} \cdot \dfrac{n!}{r!(n - r -1 )! } \cdot \dfrac{n-r}{n-r}$, which, when multiplied through, becomes $\dfrac{1}{r+1} \cdot \dfrac{n!(n-r)}{r!(n-r)!}$, and reordered
-$\dfrac{n-r}{r+1} \cdot \dfrac{n!}{r!(n-r)!}$.
+We then have $\dfrac{1}{r+1} \cdot \dfrac{n!}{r!(n - r)! } \cdot \dfrac{1}{n-r+1}$, at which point we become
+stuck on this problem.
 
-The second half of our term directly matches our earlier definition of factorial, and thus the entire term can
-be rewritten as our goal term $\dfrac{n-r}{r+1} \displaystyle{n \choose r}$.
 \end{enumerate}
-
 \end{document}
 
 % LocalWords: LocalWords differentiable

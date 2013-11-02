@@ -1,0 +1,135 @@
+% -*- fill-column: 110 -*-
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+% \usepackage{apacite}
+\usepackage{color}
+%\usepackage{sagetex}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\pagestyle{fancy}
+\lhead{\footnotesize Exercise Sets 5.6 5.7}
+\rhead{\footnotesize October 32 2013 -- MA325 -- Shae Erisson}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+\newenvironment{modenumerate}
+  {\enumerate\setupmodenumerate}
+  {\endenumerate}
+
+\newif\ifmoditem
+\newcommand{\setupmodenumerate}{%
+  \global\moditemfalse
+  \let\origmakelabel\makelabel
+  \def\moditem##1{\global\moditemtrue\def\mesymbol{##1}\item}%
+  \def\makelabel##1{%
+    \origmakelabel{##1\ifmoditem\rlap{\mesymbol}\fi\enspace}%
+    \global\moditemfalse}%
+}
+
+\begin{document}
+
+
+% Section 5.6: 2, 3, 13, 26, 27, 31*
+% Problem 27 has a typo in the book.  The problem should read F_k^2 - F_{k-1}^2 = F_k F_{k+1}-F_{k+1}F_{k-1}.
+\setcounter{section}{5}
+\subsection{Exercise Set 5.6 - Defining Sequences Recursively}
+\begin{modenumerate}
+
+\setcounter{enumi}{1}
+\item % 2
+Find the first four terms of the sequence $b_{k} = b_{k-1} + 3k$ for all integers $k \geq 2$, where $b_{1} =
+1$
+\begin{itemize}
+\item $b_{1} = 1$
+\item $b_{2} = 7$
+\item $b_{3} = 10$
+\item $b_{4} = 22$
+\end{itemize}
+
+\item % 3
+Find the first four terms of the sequence $c_{k} = k(c_{k-1})^{2}$ for all integers $k \geq 1$, where
+$c_{0}=1$
+\begin{itemize}
+\item $c_{0} = 1$
+\item $c_{1} = 1$
+\item $c_{2} = 2$
+\item $c_{3} = 6$
+\item $c_{4} = 144$
+\end{itemize}
+
+\setcounter{enumi}{12}
+\item % 13
+
+Let $t_{0},t_{1},t_{2},...$ be defined by the formula $t_{n}=2+n$ for all integers $n \geq 0$. Show that this
+sequence satisfies the recurrence relation $t_{k}=2t_{k-1}-t_{k-2}$.
+
+Since $t_{k-1}=2+(n-1)$ and $t_{k-2}=2+(n-2)$ we can substitute those into $t_{k}=2t_{k-1}-t_{k-2}$ to get
+$t_{k} = 2(2+(n-1)) - (2+(n-2))$. Combining the integers gets us to $t_{k} = 2(n+1) - n$ and distributing gets
+us to $t_{k} = 2n+2 - n$. Once again, combining like terms and rearranging gets us to $t_{k} = 2+n$. Thus
+these two forms are equal.
+
+\setcounter{enumi}{25}
+\item % 26
+  Prove that $F_{k}=3F_{k-3}+2F_{k-4}$ for all integers $k\geq 4$, where F is the Fibonacci sequence.
+  \footnote{I'm convinced there's a more general proof hiding here that shows that multiplying two sequential
+    lesser indices by two sequential Fibonacci numbers will also give a Fibonacci number.}
+
+The Fibonacci sequence is defined as $F_{k}=F_{k-1}+F_{k-2}$. By our earlier definition of the Fibonacci
+sequence, we can combine any two sequential indices to get the number that has an index one greater than the
+largest of the two indices we have combined. Thus two values of $F_{k-3}$ and two values of $F_{k-4}$ will
+give two values of $F_{k-2}$. We show several steps in this sequence.
+  $$F_{k}=3F_{k-3}+2F_{k-4}$$
+  $$F_{k}=2F_{k-2}+F_{k-3}$$
+  $$F_{k}=F_{k-1}+F_{k-2}$$
+  $$F_{k}=F_{k}$$
+
+\item % 27
+Prove that $F_k^2 - F_{k-1}^2 = F_k F_{k+1}-F_{k+1}F_{k-1}$ for all integers $k \geq 1$.
+% $$F_k^2 - F_{k-1}^2 = F_{k+1}(F_k-F_{k-1})$$
+% $$F_k^2 - F_{k-1}^2 = F_{k+1}(F_k-F_{k-1})$$
+
+% $$F_{k}F_k - F_{k-1}F_{k-1} = F_k F_{k+1}-F_{k+1}F_{k-1}$$
+% $$F_{k}F_{k-1}F_{k-2} - F_{k-1}F_{k-1} = F_k F_{k+1}-F_{k+1}F_{k-1}$$
+% $$F_{k-1}(F_{k}F_{k-2} - F_{k-1}) = F_k F_{k+1}-F_{k+1}F_{k-1}$$
+% $$F_{k-1}(F_{k}F_{k-2} - F_{k-1}) = F_{k-1}F_{k-2}F_{k+1}-F_{k+1}F_{k-1}$$
+% $$F_{k-1}(F_{k}F_{k-2} - F_{k-1}) = F_{k-1}(F_{k-2}F_{k+1}-F_{k+1})$$
+\setcounter{enumi}{30}
+\moditem{*} Use mathematical induction to prove that for all integers $n < 1,
+F_{n}<2^{n}$
+
+Base Case: $1<2^{1}$ since $1<2$, this is correct.
+
+Inductive Hypothesis: Assume that $F_{n}<2^{n}$ for all integers $j \geq 1$, up to some integer $k \in
+\mathbb{Z}$.
+
+Inductive Step: We want to show that $F_{n+1}<2^{n+1}$.
+
+\end{modenumerate}
+% \subsection{Exercise Set 5.7 - Solving Recurrence Relations by Iteration}
+% % Section 5.7: 28, 30, 35*, 39
+% % Note: I assigned these questions not because their answers are in the back of the book, but because the
+% % problems they depend on are in the book.  Try problems 3, 5, 10 and 14, but don't spend a ton of time on
+% % them.
+% \begin{modenumerate}
+%   \setcounter{enumi}{27}
+% \item % 28
+% Verify Exercise 3 by mathematical induction (fill it in!).
+% \setcounter{enumi}{29}
+% \item % 30
+% Verify Exercise 5 by mathematical induction.
+% \setcounter{enumi}{34}
+% \moditem{*} % 35
+% Verify Exercise 10 by mathematical induction.
+% \setcounter{enumi}{38}
+% \item % 39
+% Verify Exercise 14 by mathematical induction.
+% \end{modenumerate}
+\end{document}
+
+% LocalWords: LocalWords

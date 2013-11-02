@@ -1,0 +1,55 @@
+% -*- fill-column: 110 -*-
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+% \usepackage{apacite}
+\usepackage{color}
+%\usepackage{sagetex}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\pagestyle{fancy}
+\lhead{\footnotesize Exercise Sets 4.1,4.2,4.3,4.4,4.6}
+\rhead{\footnotesize September 20 2013 -- MA325 -- Shae Erisson}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\begin{document}
+
+% Section 4.6: 11, 13, 28*
+\setcounter{section}{4}
+\section*{Exercise Sets 4.6, 4.7}
+
+\subsection{Direct Proof and Counterexample: Division into Cases and the Quotient Remainder Theorem} 
+% Section 4.6: 11, 13, 28
+\begin{enumerate}
+\setcounter{enumi}{10} % 11
+\item % 
+
+\setcounter{enumi}{12} % 13
+\item %
+
+\setcounter{enumi}{27} % 28
+\item % for all integers m and n, if mn is even then m is even or n is even
+  \begin{proof}[For all integers $m$ and $n$, if $mn$ is even, then $m$ is even or $n$ is even.]
+    % I think we want to cast this as a mod 2 = 0 problem
+    Suppose not. That is, suppose there is an integer $mn$ that is even, and neither $m$ nor $n$ are even.
+That is, neither $m$ nor $n$ have 2 as a factor.
+By the Unique Factorization Theorem, either $n$ or $m$ must have 2 as a factor in order for $mn$ to be
+even. Since neither $m$ nor $n$ have 2 as a factor, this is a contradiction.
+  \end{proof}
+
+  \begin{proof}[For all integers $m$ and $n$ if $mn$ is even, then $m$ is even or $n$ is even.]
+    We proceed by contrapositive. Our original statement is $\forall m,n \in \mathbb{Z}$ where $mn \mod{2} = 0
+    \rightarrow n \mod{2} = 0 \vee m \mod{2} = 0$. The contrapositive is $\forall m,n \in \mathbb{Z}$ where
+    ... The rest of this homework has been canceled due to life issues.
+  \end{proof}
+
+\end{enumerate}
+
+\end{document}
+
+% LocalWords: LocalWords differentiable

@@ -1,0 +1,85 @@
+% -*- fill-column: 110 -*-
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+% \usepackage{apacite}
+\usepackage{color}
+%\usepackage{sagetex}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\pagestyle{fancy}
+\lhead{\footnotesize Project 2}
+\rhead{\footnotesize November 4 2013 -- MA325 -- Shae Erisson, Jordan Herring}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+
+\newtheorem{case}{Case}
+\newtheorem{subcase}{Case}
+\numberwithin{subcase}{case}
+
+\begin{document}
+
+
+\section*{For sets $A$,$B$, and $C$,$(A\cup B) - C = (A - C) \cup (B - C)$}
+\begin{proof} % For all integers $n$,$\[n+(n+1)+(n+2)+(n+3)\]$ mod 4 = 2]
+
+For sets $A$,$B$, and $C$,$(A\cup B) - C = (A - C) \cup (B - C)$
+
+To prove set equality, we prove that the left side of the equation is a subset of the right side of the
+equation, and that the right side of the equation is a subset of the left side of the equation.\\
+The union of $A$ and $B$ is defined as $A \cup B = \{ x \in U | x \in A$ or $x \in B\}$.\\
+The difference of two sets $A$ and $B$ is defined as $A - B = \{x \in U | x \in A$ and $x \not\in B\}$.
+
+We start by proving $(A\cup B) - C \subseteq (A - C) \cup (B - C)$ by element chasing.
+By definition, $A \cup B$ is equivalent to $x \in A$ or $x \in B$, giving two cases.
+\begin{case}
+$x \in A$. As $x \in A$, $x \in A \cup B$ by definition of union.
+  \begin{subcase}
+    $x \not\in C$. As $x \not\in C$, $x \in (A\cup B) - C$ by definition of set difference.
+  \end{subcase}
+  \begin{subcase}
+    $x \in C$. As $x \in C$, $x \not\in (A \cup B) - C$ by definition of set difference.
+  \end{subcase}
+\end{case}
+\begin{case}
+  $x \in B$. As $x \in B$, $x \in A \cup B$ by definition of union.
+  \begin{subcase}
+    $x \not\in C$. As $x \not\in C$, $x \in (A\cup B) - C$ by definition of set difference.
+  \end{subcase}
+  \begin{subcase}
+    $x \in C$. As $x \in C$, $x \not\in (A \cup B) - C$ by definition of set difference.
+  \end{subcase}
+\end{case}
+
+We continue by proving $(A\cup B) - C \supseteq (A - C) \cup (B - C)$ by element chasing.
+\begin{case}
+$x \in A$. 
+\begin{subcase}
+  $x \in C$. As $x \in C$, $x \not\in A - C$ by definition of set difference. Thus $x \not\in (A - C) \cup (B
+  - C)$ by definition of union.
+\end{subcase}
+\begin{subcase}
+  $x \not\in C$. As $x \not\in C$, $x \in A - C$ by definition of set difference. Thus $x \in (A - C) \cup (B
+  - C)$ by definition of union.
+\end{subcase}
+\end{case}
+\begin{case}
+  $x in B$.
+  \begin{subcase}
+    $x \in C$. As $x \in C$, $x \not \in B - C$ by definition of set difference. Thus $x \not\in (A - C) \cup (B
+    - C)$ by definition of union.
+  \end{subcase}
+  \begin{subcase}
+    $x \not \in C$. As $x \not \in C$, $x \in B - C$ by definition of set difference. Thus $x \in (A - C) \cup
+    (B - C)$ by definition of union.
+  \end{subcase}
+\end{case}
+\end{proof}
+\end{document}
+
+% LocalWords: LocalWords differentiable

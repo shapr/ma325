@@ -1,0 +1,39 @@
+% -*- fill-column: 110 -*-
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+% \usepackage{apacite}
+\usepackage{color}
+%\usepackage{sagetex}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\pagestyle{fancy}
+\lhead{\footnotesize Project 1}
+\rhead{\footnotesize October 4 2013 -- MA325 -- Shae Erisson, Jordan Herring}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\begin{document}
+
+\section*{For all integers $n$,$[n+(n+1)+(n+2)+(n+3)]$ mod 4 = 2}
+\begin{proof} % For all integers $n$,$\[n+(n+1)+(n+2)+(n+3)\]$ mod 4 = 2]
+By definition, $n$ mod $d$ = $r$, can be rewritten as $n = dq + r$.
+
+%Thus we wish to prove that $[n+(n+1)+(n+2)+(n+3)]$ mod 4 = 2 is equal to 
+We start with $[n+(n+1)+(n+2)+(n+3)]$ and rewrite it as $4n+6$.
+We can then use the given definition of mod to show that our goal is
+to prove that $4n + 6 = 4q+2$ for some value of $q$.
+We use the definition of mod to choose a goal of proving that $4n+6 =
+4q + 2$, for any integer $n$, and for some integer $q$.
+$4n + 6$ can be rewritten as $4n + 4 + 2$ and then we can factor out a
+4 from the first two elements and rewrite it as $4(n + 1) + 2$ which
+is equivalent to our goal of finding $n = 4q + 2$, where q is $n + 1$.
+
+\end{proof}
+\end{document}
+
+% LocalWords: LocalWords differentiable
