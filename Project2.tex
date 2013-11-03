@@ -22,11 +22,17 @@
 \newtheorem{subcase}{Case}
 \numberwithin{subcase}{case}
 
+\newtheorem{case1}{Case}
+\newtheorem{case2}{Case}
+
+% \newtheorem{thm}{Theorem}[section]
+% \newtheorem{lem}[thm]{$(A \cup B) \setminus C = (A \setminus C)\cup (B \setminus C)$}
+
 \begin{document}
 
 
 \section*{For sets $A$,$B$, and $C$,$(A\cup B) - C = (A - C) \cup (B - C)$}
-\begin{proof} % For all integers $n$,$\[n+(n+1)+(n+2)+(n+3)\]$ mod 4 = 2]
+\begin{proof} 
 
 For sets $A$,$B$, and $C$,$(A\cup B) - C = (A - C) \cup (B - C)$
 
@@ -79,6 +85,49 @@ $x \in A$.
     (B - C)$ by definition of union.
   \end{subcase}
 \end{case}
+\end{proof}
+\pagebreak{}
+Claim: $(A \cup B) \setminus C = (A \setminus C)\cup (B \setminus C)$
+To be shown: $$(A \cup B) \setminus C \subseteq (A \setminus C)\cup (B \setminus C)$$
+$$(A \setminus C)\cup (B \setminus C) \subseteq (A \cup B) \setminus C$$
+
+\begin{proof}
+%Let $x \in A \cup B \setminus C$, then $x \not\in C$, but $x$ is in either $A$ or $B$.
+\begin{enumerate}
+\item $(A \cup B) \setminus C \subseteq (A \setminus C)\cup (B \setminus C)$\\
+  Let $x \in (A \cup B) \setminus C$. So $x \in A$ or $x \in B$, but $x \not\in C$.
+\begin{case1}
+   Let $x \in A$. Furthermore, $x \not\in C$ so $x \in A$ and $x \not\in C$. By definition of set difference,
+   $x \in A \setminus C$.
+\end{case1}
+\begin{case1}
+  Let $x \in B$. But, $x \not\in C$ so $x \in B$ and $x \not\in C$, and by definition of set difference, $x
+  \in B \setminus C$.
+\end{case1}
+Since either $x \in A \setminus C$ or $x \in B \setminus C$, then by definition of union, $x \in (A \setminus
+C) \cup (B \setminus C)$.
+
+We have shown that if $x \in (A \cup B) \setminus C$ then $x \in (A \setminus C)\cup (B \setminus C)$ and thus
+$(A \cup B) \setminus C \subseteq (A \setminus C)\cup (B \setminus C)$.
+
+\item $(A \setminus C)\cup (B \setminus C) \subseteq (A \cup B) \setminus C$\\
+Let $x \in (A \setminus C)\cup (B \setminus C)$. By definition of union, $x \in (A \setminus C)$ or $x \in (B
+\setminus C)$.
+\begin{case2}
+  Let $x \in (A \setminus C)$. So $x \in A$ and $x \not\in C$. Since $x \in A$, by definition of union, $x \in
+  (A \cup B)$. Since $x \in (A \cup B)$ and $x \not\in C$, $x \in (A \cup B) \setminus C$.
+\end{case2}
+\begin{case2}
+  Let $x \in (B \setminus C)$. So $x \in B$ and $x \not\in C$. Since $x \in B$, by definition of union, $x \in
+  (A \cup B)$. Since $x \in (A \cup B)$ and $x \not\in C$, $x \in (A \cup B) \setminus C$.
+\end{case2}
+We have shown that if $x \in (A \setminus C) \cup (B \setminus C)$ then $x \in (A \cup B) \setminus C$ and
+by definition of subset $(A \setminus C)\cup (B \setminus C) \subseteq (A \cup B) \setminus C$
+\end{enumerate}
+
+We have shown $(A \setminus C)\cup (B \setminus C) \subseteq (A \cup B) \setminus C$ and $(A \cup B) \setminus
+C \subseteq (A \setminus C)\cup (B \setminus C)$ and thus by definition of set equality can conclude that\\ for
+sets $A$,$B$, and $C$,$(A\cup B) - C = (A - C) \cup (B - C)$
 \end{proof}
 \end{document}
 
