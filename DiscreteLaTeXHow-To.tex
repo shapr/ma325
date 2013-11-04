@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx,wasysym,gensymb}
+\usepackage{hyperref}
+\usepackage[hmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+
+
+
+\begin{document}
+
+\begin{center}
+\Large{LaTeX How-To}
+\end{center}
+The information above in this file tells LaTeX which packages it needs, and what the structure of the page should be.  You don't need to worry about that.  When you're ready, you can delete everything in this file and use it as a template for your project (or comment everything out - select and hit Command + T, I think).
+
+\begin{enumerate}
+\item The enumerate commands allow you to number items.  If you want a new number, simply type 
+a new backslash item.
+\end{enumerate}
+
+\begin{itemize}
+\item Conversely, the itemize environment lets you bullet things.  
+\item[*] If you would rather have a different character than a bullet, but it in square brackets after the item.
+\end{itemize}
+
+Now to type math, you must use dollar signs around your equations/expressions or you'll get an error.  For example, I write $5 \mod 3 = 2$.  If you have a single variable, you won't get an error, but it will look funny if you don't but it in dollar signs: $n$ vs n.  If you want your math on its own line, you can use double dollar signs: $$8x^2 + 3x + 1$$
+
+If you want to list several equations, you have several options.  If that is something you want to do, read this: \url{http://moser.cm.nctu.edu.tw/docs/typeset_equations.pdf}
+
+LaTeX defaults in paragraph mode.  If you don't want your paragraph indented, just write \noindent.
+
+\noindent See, no indent!
+
+Particular tips \& tricks:
+\begin{itemize}
+\item The ampersand character is a reserved character in LaTeX, as is the pound sign, and the dollar sign.  If you need to use them just put a backslash first: \$, \#, \&.
+\item If you want to write notes to yourself, %Put a percent sign.  Everything after this doesn't show up in the pdf!.
+\item If you want your pdf to start a new line, hit enter *twice*.  If your line numbers are adjacent (see <----), then they will come out as the same paragraph in the pdf.
+\item If you want to put vertical space, say between your proofs, you have two options:
+the \vspace{.5in} command works if you want to fix an amount to skip.  The \vfill command will push everything after that command to the bottom of the page.
+\item If you need a new page, use the command (without the verbatim) \verb|\newpage|
+\item If you're in MAB 7 (or using TeXMaker at home) then on the far left there is a tool bar of math symbols for you to look up the code for.  You will probably need $\mod$, but I'm not sure what else.
+\item Finally, to compile your file to see the beautiful PDF, hit the blue arrow above that is next to the word Quick Build.
+\end{itemize}
+
+Once you've written your claim, follow the following to put in the proof:
+
+\noindent \underline{Claim:}  Write out your claim.
+
+\begin{proof}
+Put your proof here!
+\end{proof}
+
+\end{document}
