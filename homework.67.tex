@@ -73,6 +73,24 @@ The first and third of these are equal.
 \item % 7
 \item % 8
 \item % 9*
+For all sets $A$, $B$, and $C$, 
+$$(A - B) \cup (C - B) = (A \cup C) - B$$
+We start with $(A - B) \cup (C - B) \subseteq (A \cup C) - B$.
+
+Let $x \in (A - B)$. We know that $x \not\in B$ by definition of set difference. Since $x \in A$ and $x
+\not\in B$, we know $x \in (A \cup C) - B$.
+
+Let $x \in (C - B)$. We know that $x \not\in B$ by definition of set difference. Since $x \in C$ and $x
+\not\in B$, we know $x \in (A \cup C) - B$.
+
+Thus we have shown that $(A - B) \cup (C - B) \subseteq (A \cup C) - B$.
+
+We continue with $(A - B) \cup (C - B) \supseteq (A \cup C) - B$.
+
+Let $x \in A$ and $x \not\in C$. We know that $x \in (A \cup C)$ by definition of union, and since $x \not\in
+B$, we know that $(A - B) \cup (C - B) \supseteq (A \cup C) - B$.
+
+Thus we have shown $(A - B) \cup (C - B) = (A \cup C) - B$.
 
 \setcounter{enumi}{11}
 \item % 12
@@ -95,6 +113,7 @@ The first and third of these are equal.
 \setcounter{enumi}{14}
 \item % 15
 \item % 16*
+$f(x) = \dfrac{x}{x^{2}+1}$ is not surjective, because it does produce all real numbers.
 \setcounter{enumi}{35}
 \item % 36
 \item % 37
