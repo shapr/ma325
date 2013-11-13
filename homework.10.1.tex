@@ -17,19 +17,158 @@
 \rhead{\footnotesize October 11 2013 -- MA325 -- Shae Erisson}
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newenvironment{modenumerate}
+  {\enumerate\setupmodenumerate}
+  {\endenumerate}
+
+\newif\ifmoditem
+\newcommand{\setupmodenumerate}{%
+  \global\moditemfalse
+  \let\origmakelabel\makelabel
+  \def\moditem##1{\global\moditemtrue\def\mesymbol{##1}\item}%
+  \def\makelabel##1{%
+    \origmakelabel{##1\ifmoditem\rlap{\mesymbol}\fi\enspace}%
+    \global\moditemfalse}%
+}
+
+
 \begin{document}
 
 % Section 10.1: 1,3,15,27*,31,37
 
 \setcounter{section}{10}
-\section*{Exercise Set 10.1 - Set Theory, Element Method of Proof}
-\begin{enumerate}
+\section*{Exercise Set 10.1} % - Graphs, Definitions, and Basic Properties}
+\begin{modenumerate}
 \item % 1
+  A graph consists of two finite sets: a nonempty set $V(G)$ of vertices and a set $E(G)$ of edges, where each
+  edge is associated with a set consisting of connected edges.  \setcounter{enumi}{2}
+\item % 3
+Two distinct edges in a graph are parallel if, and only if, they have the exact same set of endpoints.
+\setcounter{enumi}{14}
+\item % 15
+The handshake theorem says that the total degree of a graph is twice the number of edges in the graph.
+\setcounter{enumi}{26}
+\moditem{*} % 27
+\begin{enumerate}
+\item 
+For each person in a 15 person group to have exactly three friends, each vertex would require three edges that
+go to other vertices. If each point had three edges, the total degree of the graph would be $\dfrac{3(15)}{2}$
+or $\dfrac{45}{2}$. Since this is not an integer, there is no way for 15 people to each have 3 friends in a
+group.
+\item Yes, it is possible for a group of 4 people to have three friends each. The resulting graph would be
+  fully connected, where each vertex is connected to the other three by an edge representing friendship.
+\end{enumerate}
 
+\setcounter{enumi}{30}
+\item % 31
+\begin{proof}[Prove that the sum of an odd number of odd numbers is odd.]
+
+We proceed by induction.
+
+Let the series $a_{1},a_{2} \dots a_{n}$ be a series of odd numbers.
+
+Let the property $P(n)$ be $\displaystyle\sum_{m=1}^{n=2k+1}a_{i}$.
+
+Base Case: $\displaystyle\sum_{m=1}^{n=1}a_{1}$ The 'sum' of one odd number is odd.
+
+Inductive Hypothesis: $\displaystyle\sum_{m=1}^{n=2k+1}a_{1}$ will be odd.
+
+Inductive Step: $\displaystyle\sum_{m=1}^{n=2k+2}a_{1}$ will be odd.
+
+By assumption we know that the sum from 1 to $2k+1$ is odd. Thus we are adding two more odd numbers to the
+sum. We know that the sum of any two odd numbers is even, and we know that the sum of an odd number and an
+even number is odd.
+\end{proof}
+\setcounter{enumi}{36}
+\item % 37
+Which of the following graphs are bipartite?
+\begin{enumerate}
+\item This graph is bipartite.
+\item This graph is not bipartite.
+\item This graph is bipartite.
+\item This graph is not bipartite.
+\item This graph is bipartite.
+\item This graph is not bipartite.
+\end{enumerate}
+\end{modenumerate}
+\setcounter{section}{10}
+\section{10.5}
+\begin{modenumerate}
 \setcounter{enumi}{2}
 \item % 3
-Two dins
-\end{enumerate}
+  The total degree of a tree with $n$ vertices is $2(n-1)$ because, by definition, a tree is circuit-free and
+  connected. If a graph is connected, there will be at least one edge to every vertex. If a graph is
+  circuit-free, there will be at most one edge between any two chosen points.
+  \begin{proof}[For any positive integer $n$, any tree with $n$ vertices has $n-1$ edges.]
+    Let our property $P(n)$ be the sentence
+
+    Any tree with $n$ vertices has $n-1$ edges.
+
+    We will use induction to show that this is true for any number of vertices $n\geq 1$.
+    
+    Base Case: Let $T$ be any tree with one vertex. Then $T$ has zero edges (since it contains no loops). But
+    $0 = 1-1$ so $P(1)$ is true.
+
+    Inductive Hypothesis: We assume that for all integers $k \geq 1$, $P(k)$ is true.
+
+    Inductive Step: If $P(k)$ is true, $P(k+1)$ is true.
+
+    Suppose $k$ is any positive integer for which $P(k)$ is true. In other words, suppose that:
+
+    Any tree with $k$ vertices has $k -1$ edges.
+
+    We want to show that $P(k+1)$ is true, in other words we want to show that 
+
+    Any tree with $k+1$ vertices has $(k+1)-1 = k$ edges.
+
+    Let $T$ be a particular but arbitrarily chosen tree with $k + 1$ vertices. Since $k$ is a positive
+    integer, $(k+1) \geq 2$, and so $T$ has more than one vertex. By the next proof, $T$ has a vertex $v$ of
+    degree 1. Also, since $T$ has more than one vertex, there is at least one other vertex in $T$ besides
+    $v$. Thus there is an edge $e$ connecting $v$ to the rest of $T$. 
+
+    We define a subgraph $T'$ of $T$ so that 
+
+    $V(T') = V(T) - \{v\}$
+
+    then
+
+    $E(T') = E(T) - \{e\}$
+    \begin{enumerate}
+    \item The number of vertices of $T'$ is $(k+1)-1=k$.
+    \item $T'$ is circuit-free
+    \item $T'$ is connected
+    \end{enumerate}
+    Hence, by definition of tree, $T'$ is a tree. Since $T'$ has $k$ vertices, by inductive hypothesis
+
+    the number of edges of $T' = $(the number of vertices of $T') - 1$.
+
+    $= k - 1$
+
+    But then,
+
+    the number of edges of $T = ($the number of edges of $T') + 1$
+
+    $= (k-1)+1$
+
+    $= k$
+  \end{proof}
+
+  \begin{proof}[Any tree that has more than one vertex has at least one vertex of degree 1]
+    Let $T$ be a particular but arbitrarily chosen tree that has more than one vertex, and consider the
+    following algorithm:
+    \begin{enumerate}
+    \item Pick a vertex $v$ of $T$ and let $e$ be an edge incident on $v$.
+    \item While degree$($v$) > 1$ repeat steps i,ii, and iii.
+      \begin{enumerate}
+      \item Choose $e'$ to be an edge incident on $v$ such that $e' \neq e$
+      \item Let $v'$ be the vertex at the other end of $e'$ from $v$.
+      \item Let $e = e'$ and $v = v'$.
+      \end{enumerate}
+    \end{enumerate}
+    The algorithm described must eventually terminate because the set of vertices of the tree $T$ is finite,
+    and $T$ is circuit-free. When it does, a vertex $v$ of degree 1 will have been found.
+  \end{proof}
+\end{modenumerate}
 \end{document}
 
 % LocalWords: LocalWords differentiable
