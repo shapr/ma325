@@ -6,6 +6,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{graphicx}
 \usepackage[margin=1in]{geometry}
 % \usepackage{apacite}
 \usepackage{color}
@@ -37,7 +38,8 @@
 % Section 10.1: 1,3,15,27*,31,37
 
 \setcounter{section}{10}
-\section*{Exercise Set 10.1} % - Graphs, Definitions, and Basic Properties}
+\subsection{Graphs, Definitions, and Basic Properties}
+
 \begin{modenumerate}
 \item % 1
   A graph consists of two finite sets: a nonempty set $V(G)$ of vertices and a set $E(G)$ of edges, where each
@@ -91,8 +93,8 @@ Which of the following graphs are bipartite?
 \item This graph is not bipartite.
 \end{enumerate}
 \end{modenumerate}
-\setcounter{section}{10}
-\section{10.5}
+\setcounter{subsection}{4}
+\subsection{Trees}
 \begin{modenumerate}
 \setcounter{enumi}{2}
 \item % 3
@@ -168,6 +170,22 @@ Which of the following graphs are bipartite?
     The algorithm described must eventually terminate because the set of vertices of the tree $T$ is finite,
     and $T$ is circuit-free. When it does, a vertex $v$ of degree 1 will have been found.
   \end{proof}
+\end{modenumerate}
+\setcounter{subsection}{6}
+\subsection{Spanning Trees and Shortest Paths}
+% 10.7: 5, 6*, 7, 8, 18a*
+\begin{modenumerate}
+\setcounter{enumi}{4}
+\item % 5
+\moditem{*} % 6
+For the graph included below, we will demonstrate Prim's algorithm.\\
+\includegraphics[scale=.4,natwidth=603,natheight=611]{graph6.png}\\
+We start with vertex $v_{0}$ and find the minimum weight edge, $v_{0}\leftrightarrow v_{5}$. We then add the
+next minimum edge that does not create a cycle, $v_{5} \leftrightarrow v_{4}$. 
+\item % 7
+\item % 8
+\setcounter{enumi}{17}
+\moditem{*} % 18a
 \end{modenumerate}
 \end{document}
 
